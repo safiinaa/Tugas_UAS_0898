@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val imageList = intArrayOf(
+        val listimage = intArrayOf(
             R.drawable.broken,
             R.drawable.power,
             R.drawable.bmth,
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             R.drawable.nct127,
         )
 
-        val Liriklagu = intArrayOf(
+        val liriklagu = intArrayOf(
             R.string.Brokenlirik,
             R.string.ClouserLirik,
             R.string.DiE4uLirik,
@@ -38,13 +38,15 @@ class MainActivity : AppCompatActivity() {
         )
         val Listname = arrayOf("Broken Meodies", "Closure", "DiE4u", "Introvert",
             "Kemana Kita Hari Ini", "Touch")
+
         val listArtis = arrayOf("NCT DREAM", "I PREVAIL", "BRING ME THE HORIZON",
             "STAND HERE ALONE", "BATAS SENJA", "NCT 127")
 
-        for (i in imageList.indices){
+        for (i in listimage.indices){
             listData = ListData (
-                Listname[i], imageList[i], Liriklagu[i]
+                Listname[i], liriklagu[i], listimage[i], listArtis[i]
             )
+
             dataArrayList.add(listData)
         }
         listAdapter = ListAdapter(this@MainActivity, dataArrayList)
@@ -54,8 +56,8 @@ class MainActivity : AppCompatActivity() {
         binding.listView.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
             val intent = Intent(this@MainActivity, DetailActivity::class.java)
             intent.putExtra("name", Listname[i])
-            intent.putExtra("Brokenlirik)", Liriklagu[i])
-            intent.putExtra("image)", imageList[i])
+            intent.putExtra("lagu", liriklagu[i])
+            intent.putExtra("image", listimage[i])
             startActivity(intent)
         }
     }

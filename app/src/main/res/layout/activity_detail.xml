@@ -52,6 +52,6 @@
         android:layout_height="wrap_content"
         android:text="@string/Brokenlirik"
         android:layout_marginStart="18dp"
-        android:id="@+id/Liriklagu"
+        android:id="@+id/liriklagu"
         android:textSize="16sp"/>
 </LinearLayout>

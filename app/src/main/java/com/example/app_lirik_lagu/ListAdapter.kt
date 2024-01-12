@@ -22,13 +22,17 @@ ArrayAdapter<ListData?>(context, R.layout.list_item_lirik, dataArrayList!!){
         val listimage = view!!.findViewById<ImageView>(R.id.listimage)
         val ListName = view!!.findViewById<TextView>(R.id.Listname)
         val listArtis = view!!.findViewById<TextView>(R.id.listArtis)
-        val Liriklagu = view!!.findViewById<TextView>(R.id.Liriklagu)
+        val liriklagu = view!!.findViewById<TextView>(R.id.liriklagu)
 
-        listimage.setImageResource(listData!!.image)
-        ListName.text = listData.nama
+        listimage.setImageResource (listData!!.image)
+        ListName.text = listData.name
         listArtis.text = listData.artis.toString()
-        Liriklagu.text = listData.lagu.toString()
+        liriklagu.text = listData.lagu.toString()
 
         return view
     }
+}
+
+private fun ImageView.setImageResource(image: String) {
+    TODO("Not yet implemented")
 }

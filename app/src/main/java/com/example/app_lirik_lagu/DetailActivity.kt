@@ -16,11 +16,11 @@ class DetailActivity : AppCompatActivity() {
         val intent = this.intent
         if (intent != null){
             val nama = intent.getStringExtra("nama")
-            val Liriklagu = intent.getIntExtra("Lirik", R.string.Brokenlirik)
+            val liriklagu = intent.getIntExtra("Lirik", R.string.Brokenlirik)
             val image = intent.getIntExtra("image", R.drawable.broken)
 
             binding.DetailHome.text = nama
-            binding.Liriklagu.setText(Liriklagu)
+            binding.liriklagu.setText(liriklagu)
             binding.detailImage.setImageResource(image)
         }
     }
