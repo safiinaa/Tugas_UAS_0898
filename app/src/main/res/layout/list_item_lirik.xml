@@ -41,7 +41,7 @@ app:contentPadding="10dp">
             android:layout_marginBottom="10dp"
             android:text="Name"
             android:textColor="@color/abuabu"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_toEndOf="@id/listimage"/>
 
         <TextView
@@ -53,7 +53,7 @@ app:contentPadding="10dp">
             android:layout_marginBottom="30dp"
             android:text="Artis"
             android:textColor="@color/abuabu"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_toEndOf="@id/listimage"/>
 
 
